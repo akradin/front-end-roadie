@@ -1,0 +1,8 @@
+Here is your to-do list! These are the tasks you need to complete.
+{{task-list list=model
+            newTask='newTask'}}
+
+{{#each model as |task|}}
+{{task.name}}
+{{/each}}
+{{outlet}}

@@ -1,0 +1,10 @@
+<form {{action 'newTask' on='submit'
+                toggleComplete='toggleComplete'}}>
+{{input placeholder="Name" value=Task.name}}
+{{input placeholder="due date" value=Task.due_date}}
+{{input placeholder="priority level" value=Task.priority}}
+{{input placeholder="details" value=Task.details}}
+<button>new task</button>
+</form>
+
+{{yield}}
