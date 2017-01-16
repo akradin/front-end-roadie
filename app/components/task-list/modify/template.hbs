@@ -1,0 +1,10 @@
+<form {{action 'update' on='submit'}}>
+{{input  value=task.name}}
+{{input placeholder="due date" value=task.due_date}}
+{{input placeholder="priority level" value=task.priority}}
+{{input placeholder="details" value=task.details}}
+<button>update</button>
+</form>
+
+
+{{yield}}

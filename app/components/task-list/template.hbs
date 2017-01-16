@@ -1,5 +1,4 @@
-<form {{action 'newTask' on='submit'
-                toggleComplete='toggleComplete'}}>
+<form {{action 'newTask' on='submit'}}>
 {{input placeholder="Name" value=Task.name}}
 {{input placeholder="due date" value=Task.due_date}}
 {{input placeholder="priority level" value=Task.priority}}
@@ -9,8 +8,9 @@
 
 
 {{#each task as |task|}}
-  <div>{{task.name}}</div>
+  <div class="task-item" {{action 'toggleComplete' on='click'}}>{{task.name}}</div>
   {{task-list/edit task=task
-                    delete='deleteTask'}}
+                    delete='deleteTask'
+                    edit='editTask'}}
 {{/each}}
 {{yield}}

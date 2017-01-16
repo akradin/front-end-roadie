@@ -6,6 +6,10 @@ export default Ember.Component.extend({
       console.log("first step of delete", this.get('task'));
       this.sendAction('delete', this.get('task'));
 
+    },
+    edit(){
+      console.log("task is", this.get('task'));
+      this.sendAction('edit', this.get('task'));
     }
   }
 });
