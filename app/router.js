@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('tasks');
+  this.route('tasks/edit', { path: 'tasks/:task_id/edit'});
   this.route('bands');
 });
 

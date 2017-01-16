@@ -7,4 +7,10 @@
 <button>new task</button>
 </form>
 
+
+{{#each task as |task|}}
+  <div>{{task.name}}</div>
+  {{task-list/edit task=task
+                    delete='deleteTask'}}
+{{/each}}
 {{yield}}

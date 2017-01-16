@@ -16,6 +16,10 @@ export default Ember.Component.extend({
     },
     toggleComplete(){
       console.log('done');
-    }
+    },
+    deleteTask(task){
+      console.log("second step of delete", task);
+      this.sendAction('deleteTask', task);
+    },
   }
 });
