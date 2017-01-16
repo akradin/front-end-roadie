@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('tasks');
   this.route('tasks/edit', { path: 'tasks/:task_id/edit'});
   this.route('bands');
+  this.route('bands/edit', { path: 'bands/:band_id/edit'});
 });
 
 export default Router;

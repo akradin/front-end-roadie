@@ -10,6 +10,12 @@ export default Ember.Route.extend({
       let band = this.get('store').createRecord('band', newBand);
       console.log("last band is", band);
       band.save();
+    },
+    editBand(band){
+      this.transitionTo('bands/edit', band);
+    },
+    deleteBand(band){
+      band.destroyRecord();
     }
   }
 });

@@ -1,6 +1,3 @@
-{{#each model as |band|}}
-  {{band-list/card band=band
-            }}
-{{/each}}
-{{band-list band=band
-            newBand='newBand'}}
+{{band-list band=model
+            editBand='editBand'
+          deleteBand='deleteBand'}}
