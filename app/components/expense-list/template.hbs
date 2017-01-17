@@ -1,0 +1,14 @@
+<form {{action 'newExpense' on='submit'}}>
+{{input placeholder="Name" value=Expense.name}}
+{{input placeholder="Description" value=Expense.description}}
+{{input placeholder="Price" value=Expense.cost}}
+<button>Add Expense</button>
+</form>
+
+
+{{#each expense as |expense|}}
+<div>{{expense.name}}</div>
+{{expense-list/edit expense=expense
+                    edit='editExpense'
+                    delete='deleteExpense'}}
+{{/each}}

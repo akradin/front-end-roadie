@@ -16,7 +16,9 @@ Router.map(function () {
   this.route('bands/edit', { path: 'bands/:band_id/edit'});
   this.route('contacts');
   this.route('contacts/edit', { path: 'contacts/:contact_id/edit'});
-  });
+  this.route('expenses');
+  this.route('expenses/edit', { path: 'expenses/:expense_id/edit'});
+});
 
 
 export default Router;
