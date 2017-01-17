@@ -1,6 +1,6 @@
 <form {{action 'newTask' on='submit'}}>
 {{input placeholder="Name" value=Task.name}}
-{{input placeholder="due date" value=Task.due_date}}
+{{input placeholder="Due Date" value=Task.due_date}}
 {{input placeholder="priority level" value=Task.priority}}
 {{input placeholder="details" value=Task.details}}
 <button>new task</button>
@@ -14,3 +14,13 @@
                     edit='editTask'}}
 {{/each}}
 {{yield}}
+
+{{!-- <div class="input-group">
+  {{ember-datepicker
+    id="example-2"
+    class="form-control"
+    inline=false
+    value=example2
+  }}
+  <label class="input-group-addon" for="example-2"><i class="fa fa-calendar"></i></label>
+</div> --}}

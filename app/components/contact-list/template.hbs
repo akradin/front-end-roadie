@@ -1,0 +1,16 @@
+<form {{action 'newContact' on='submit'}}>
+{{input placeholder="Name" value=Contact.name}}
+{{input placeholder="Phone Number" value=Contact.phone_number}}
+{{input placeholder="email" value=Contact.email}}
+{{input placeholder="company" value=Contact.company}}
+{{input placeholder="details" value=Contact.details}}
+<button>Add Contact</button>
+</form>
+
+
+{{#each contact as |contact|}}
+  <div class="contact-item" {{action 'toggleComplete' on='click'}}>{{contact.name}}</div>
+  {{contact-list/edit contact=contact
+                      delete='deleteContact'
+                      edit='editContact'}}
+{{/each}}

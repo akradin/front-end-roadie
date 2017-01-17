@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions : {
     updateBand(band){
       band.save();
-      this.transitionTo('bands')
+      this.transitionTo('bands');
     }
   }
 });
