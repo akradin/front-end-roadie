@@ -7,6 +7,7 @@ module.exports = function (environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,7 +50,10 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'http://localhost:4741';
+    // ENV.locationType = 'http://localhost:4741';
+    ENV.apiHost = 'https://mysterious-shore-76009.herokuapp.com';
+    ENV.rootURL = '/front-end-roadie';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
