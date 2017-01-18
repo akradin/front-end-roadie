@@ -11,19 +11,19 @@ export default Ember.Component.extend({
   actions:{
     newTask(){
       let task = this.get('Task');
-      console.log("start of task is", task);
-      this.sendAction('newTask', this.get('Task'));
+      this.sendAction('newTask', task);
     },
     toggleComplete(){
       console.log('done', this.get('Task'));
     },
     deleteTask(task){
-      console.log("second step of delete", task);
       this.sendAction('deleteTask', task);
     },
     editTask(task){
       this.sendAction('editTask', task);
-      console.log("second step of edit", task);
     },
+    completeTask(task){
+      this.sendAction('completeTask', task);
+    }
   }
 });

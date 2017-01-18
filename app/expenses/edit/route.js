@@ -6,8 +6,8 @@ export default Ember.Route.extend({
   },
   actions:{
     updateSave(expense){
-      expense.save()
-      this.transitionTo('expenses')
+      expense.save();
+      this.transitionTo('expenses');
     }
   }
 });

@@ -10,7 +10,7 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('tasks');
+  this.route('tasks')
   this.route('tasks/edit', { path: 'tasks/:task_id/edit'});
   this.route('bands');
   this.route('bands/edit', { path: 'bands/:band_id/edit'});
@@ -18,6 +18,9 @@ Router.map(function () {
   this.route('contacts/edit', { path: 'contacts/:contact_id/edit'});
   this.route('expenses');
   this.route('expenses/edit', { path: 'expenses/:expense_id/edit'});
+  this.route('band', { path: 'bands/:band_id' }, function() {
+    this.route('tasks');
+  });
 });
 
 

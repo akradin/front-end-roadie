@@ -5,5 +5,6 @@ export default DS.Model.extend({
   due_date: DS.attr('date'),
   priority: DS.attr('number'),
   details: DS.attr('string'),
-  completed: DS.attr('boolean')
+  completed: DS.attr('boolean'),
+  task: DS.belongsTo('band')
 });

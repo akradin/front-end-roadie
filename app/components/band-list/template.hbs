@@ -3,11 +3,13 @@
 
 <button>new band</button>
 </form>
-{{#each band as |band|}}
-<div>{{band.name}}</div>
-  {{band-list/card band=band
+{{#each bands as |band|}}
+  <div {{action 'transition' on='click'}}>{{band.name}}</div>
+{{band-list/card band=band
                     edit='editBand'
-                  delete='deleteBand'}}
+                  delete='deleteBand'
+                  goToBand='goToBand'}}
+
 {{/each}}
 
 {{yield}}

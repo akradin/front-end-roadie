@@ -11,7 +11,8 @@
   <div class="task-item" {{action 'toggleComplete' on='click'}}>{{task.name}}</div>
   {{task-list/edit task=task
                     delete='deleteTask'
-                    edit='editTask'}}
+                    edit='editTask'
+                  complete='completeTask'}}
 {{/each}}
 {{yield}}
 

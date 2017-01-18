@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     },
     delete(){
       this.sendAction('delete', this.get('band'));
+    },
+    goToBand(){
+      this.sendAction('goToBand', this.get('band'));
     }
   }
 });
