@@ -2,8 +2,9 @@ show me something dude
 
 {{#each model.tasks as |task|}}
 <div>{{task.name}}</div>
-{{task-list/edit}}
+{{task-list/edit task=task
+                }}
 {{/each}}
-{{task-list task=task
-            newTask='newTask'}}
+{{task-list band=model
+            createTask='createTask'}}
 {{outlet}}

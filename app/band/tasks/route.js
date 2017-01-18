@@ -5,9 +5,10 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('band', params.band_id);
   },
   actions: {
-    newTask(newTask){
+    createTask(newTask){
       let task = this.get('store').createRecord('task', newTask);
-      task.save()
+      // console.log("band id is", this.get('band'));
+      task.save();
     }
   },
 });

@@ -6,5 +6,5 @@ export default DS.Model.extend({
   priority: DS.attr('number'),
   details: DS.attr('string'),
   completed: DS.attr('boolean'),
-  task: DS.belongsTo('band')
+  band: DS.belongsTo('band')
 });

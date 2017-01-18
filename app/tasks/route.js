@@ -3,13 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(params){
-    return this.get('store').findRecord('band', params.band_id).get('tasks');
+    return this.get('store').findRecord('band', params.band_id);
 
   },
 
   actions:{
-    newTask(newTask){
-      this.transitionTo('band/tasks', newTask);
+    createTask(task){
+      console.log('you getting this click?', task);
+
     },
     deleteTask(task){
       console.log("DELETING task is", task);

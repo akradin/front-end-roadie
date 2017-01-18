@@ -6,12 +6,15 @@ export default Ember.Component.extend({
     due_date: null,
     priority: null,
     details: null,
-    completed: false
+    completed: false,
   },
   actions:{
-    newTask(){
+    createTask(){
       let task = this.get('Task');
-      this.sendAction('newTask', task);
+      task.band = this.get('band');
+      this.sendAction('createTask', task);
+      console.log('band is', this.get('band.id'));
+      console.log('click?', task);
     },
     toggleComplete(){
       console.log('done', this.get('Task'));
