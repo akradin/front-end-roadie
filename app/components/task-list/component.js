@@ -21,6 +21,7 @@ export default Ember.Component.extend({
     },
     deleteTask(task){
       this.sendAction('deleteTask', task);
+      console.log('second step of deleting', task);
     },
     editTask(task){
       this.sendAction('editTask', task);

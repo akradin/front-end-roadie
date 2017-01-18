@@ -1,10 +1,12 @@
-show me something dude
+
 
 {{#each model.tasks as |task|}}
 <div>{{task.name}}</div>
 {{task-list/edit task=task
-                }}
+                delete='deleteTask'
+                edit='editTask'}}
 {{/each}}
 {{task-list band=model
             createTask='createTask'}}
+
 {{outlet}}

@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     saveUpdate(task){
       console.log("task is", task);
       task.save();
-      this.transitionTo('tasks');
+      this.transitionTo('bands');
     }
   }
 

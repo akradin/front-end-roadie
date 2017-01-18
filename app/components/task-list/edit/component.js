@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   actions: {
     delete(){
       this.sendAction('delete', this.get('task'));
+      console.log('deleting', this.get('task'));
 
     },
     edit(){
