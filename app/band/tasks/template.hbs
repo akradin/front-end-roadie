@@ -1,12 +1,18 @@
+{{task-list band=model
+            createTask='createTask'}}
 
-
+<div class="task-header">Name</div>
+<div class="task-header">Due Date</div>
+<div class="task-header">Priority</div>
+<div class="task-header">Details</div>
+<br>
 {{#each model.tasks as |task|}}
-<div>{{task.name}}</div>
+<div class="task-info">{{task.name}}</div>
+<div class="task-info">{{task.due_date}}</div>
+<div class="task-info">{{task.priority}}</div>
+<div class="task-info">{{task.details}}</div>
 {{task-list/edit task=task
                 delete='deleteTask'
                 edit='editTask'}}
 {{/each}}
-{{task-list band=model
-            createTask='createTask'}}
-
 {{outlet}}

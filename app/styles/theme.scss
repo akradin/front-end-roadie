@@ -1,3 +1,7 @@
+body {
+  background-color: #3d5a6c;
+}
+
 .contact-header {
   display: inline-block;
   margin-right: 10%;
@@ -6,4 +10,28 @@
 .contact-info {
   display: inline-block;
   margin-right: 10%;
+}
+
+.task-header {
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.task-info {
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.edit {
+  background-color: #fa9f42;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
+  margin-right: 50%;
+  width: 70px;
+}
+
+.edit:hover {
+  background-color: #fac542;
+  opacity: .5;
 }
