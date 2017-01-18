@@ -1,4 +1,3 @@
-{{outlet}}
 {{#each model.expenses as |expense|}}
 <div>{{expense.name}}</div>
 {{expense-list/edit expense=expense
@@ -7,3 +6,5 @@
 {{/each}}
 {{expense-list band=model
               createExpense='createExpense'}}
+
+{{outlet}}

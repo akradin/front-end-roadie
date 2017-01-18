@@ -1,0 +1,10 @@
+{{contact-list band=model
+              createContact='createContact'}}
+
+{{#each model.contacts as |contact|}}
+<div>{{contact.name}}</div>
+{{contact-list/edit contact=contact
+                    delete='deleteContact'
+                    edit='editContact'}}
+
+{{/each}}

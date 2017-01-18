@@ -9,9 +9,10 @@ export default Ember.Component.extend({
     details: null
   },
   actions :{
-    newContact(){
-      console.log("beep beep", this.get('contact'));
-      this.sendAction('newContact', this.get('Contact'));
+    createContact(){
+      let contact = this.get('Contact');
+      contact.band = this.get('band');
+      this.sendAction('createContact', contact);
     },
     deleteContact(contact){
       this.sendAction('deleteContact', contact);

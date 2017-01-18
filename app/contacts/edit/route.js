@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions:{
     saveUpdate(contact){
       contact.save();
-      this.transitionTo('contacts');
+      this.transitionTo('bands');
     }
   }
 });
