@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       task.save();
     },
     editTask(task){
-      this.transitionTo('tasks/edit', task)
+      this.transitionTo('tasks/edit', task);
     },
     deleteTask(task){
       task.destroyRecord();
