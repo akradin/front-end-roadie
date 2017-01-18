@@ -5,5 +5,6 @@ export default DS.Model.extend({
   phone_number: DS.attr('string'),
   email: DS.attr('string'),
   company: DS.attr('string'),
-  details: DS.attr('string')
+  details: DS.attr('string'),
+  band: DS.belongsTo('band')
 });

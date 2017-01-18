@@ -13,8 +13,6 @@ export default Ember.Component.extend({
       let task = this.get('Task');
       task.band = this.get('band');
       this.sendAction('createTask', task);
-      console.log('band is', this.get('band.id'));
-      console.log('click?', task);
     },
     toggleComplete(){
       console.log('done', this.get('Task'));

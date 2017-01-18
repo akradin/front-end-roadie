@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions:{
     updateSave(expense){
       expense.save();
-      this.transitionTo('expenses');
+      this.transitionTo('bands');
     }
   }
 });

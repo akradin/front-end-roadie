@@ -1,0 +1,9 @@
+{{outlet}}
+{{#each model.expenses as |expense|}}
+<div>{{expense.name}}</div>
+{{expense-list/edit expense=expense
+                    delete='deleteExpense'
+                    edit='editExpense'}}
+{{/each}}
+{{expense-list band=model
+              createExpense='createExpense'}}

@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-  return this.get('store').findAll('expense');
+  model(params){
+    return this.get('store').findRecord('band', params.band_id);
   },
   actions:{
     createExpense(newExpense){
@@ -16,4 +16,5 @@ export default Ember.Route.extend({
       expense.destroyRecord();
     }
   }
+
 });

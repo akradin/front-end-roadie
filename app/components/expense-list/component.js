@@ -7,8 +7,10 @@ export default Ember.Component.extend({
     cost: null
   },
   actions : {
-    newExpense(){
-      this.sendAction('newExpense', this.get('Expense'));
+    createExpense(){
+      let expense = this.get('Expense');
+      expense.band = this.get('band');
+      this.sendAction('createExpense', expense);
     },
     editExpense(expense){
       this.sendAction('editExpense', expense);
