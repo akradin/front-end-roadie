@@ -2,17 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  model(){
-    return this.get('store').findAll('Task');
+  model(params){
+    return this.get('store').findRecord('band', params.band_id).get('tasks');
 
   },
 
   actions:{
     newTask(newTask){
-      console.log("new Task is", newTask);
-      let task = this.get('store').createRecord('task', newTask);
-      console.log(" saved task is", task);
-      task.save();
+      this.transitionTo('band/tasks', newTask);
     },
     deleteTask(task){
       console.log("DELETING task is", task);

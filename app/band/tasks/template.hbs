@@ -1,2 +1,9 @@
 show me something dude
+
+{{#each model.tasks as |task|}}
+<div>{{task.name}}</div>
+{{task-list/edit}}
+{{/each}}
+{{task-list task=task
+            newTask='newTask'}}
 {{outlet}}
