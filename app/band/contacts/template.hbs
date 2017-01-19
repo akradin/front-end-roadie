@@ -1,8 +1,18 @@
 {{contact-list band=model
               createContact='createContact'}}
 
+<div class="contact-header">Name</div>
+<div class="contact-header">Phone Number</div>
+<div class="contact-header">Email</div>
+<div class="contact-header">Company</div>
+<div class="contact-header">Details</div>
+<br>
 {{#each model.contacts as |contact|}}
-<div>{{contact.name}}</div>
+<div class="contact-info">{{contact.name}}</div>
+<div class="contact-info">{{contact.phone_number}}</div>
+<div class="contact-info">{{contact.email}}</div>
+<div class="contact-info">{{contact.company}}</div>
+<div class="contact-info">{{contact.details}}</div>
 {{contact-list/edit contact=contact
                     delete='deleteContact'
                     edit='editContact'}}
