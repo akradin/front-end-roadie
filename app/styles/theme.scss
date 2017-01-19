@@ -12,6 +12,10 @@ body {
   margin-right: 10%;
 }
 
+.contact-input {
+  width: 30px;
+}
+
 .task-header {
   display: inline-block;
   margin-right: 10%;
@@ -22,7 +26,37 @@ body {
   margin-right: 10%;
 }
 
+.expense-header {
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.expense-info {
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.add-item {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40%;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  width: 127px;
+}
+
+.add-item:hover {
+  background-color: #398439;
+  opacity: .75;
+  transition-duration: .3s;
+}
+
 .edit {
+  color: white;
   background-color: #fa9f42;
   border: none;
   border-radius: 4px;
@@ -33,5 +67,21 @@ body {
 
 .edit:hover {
   background-color: #fac542;
-  opacity: .5;
+  opacity: .75;
+  transition-duration: .3s;
+}
+
+.delete {
+  color: white;
+  background-color: #721817;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
+  width: 70px;
+}
+
+.delete:hover {
+  background-color: #b22624;
+  opacity: .75;
+  transition-duration: .3s;
 }

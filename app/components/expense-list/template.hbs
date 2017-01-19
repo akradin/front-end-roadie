@@ -1,8 +1,8 @@
 <form {{action 'createExpense' on='submit'}}>
-{{input placeholder="Name" value=Expense.name}}
+{{input placeholder="Name (Required)" value=Expense.name}}
+{{input placeholder="Price (xx.xx)" value=Expense.cost}}
 {{input placeholder="Description" value=Expense.description}}
-{{input placeholder="Price" value=Expense.cost}}
-<button>Add Expense</button>
+<button class="add-item">Add Expense</button>
 </form>
 
 

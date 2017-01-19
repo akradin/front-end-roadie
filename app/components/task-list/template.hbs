@@ -3,7 +3,7 @@
 {{input placeholder="Due Date (required, YYYY-MM-DD)" value=Task.due_date}}
 {{input placeholder="priority level (required, maximum of 9)" value=Task.priority}}
 {{input placeholder="details" value=Task.details}}
-<button>new task</button>
+<button class="add-item">Add Task</button>
 </form>
 
 
@@ -15,13 +15,3 @@
                   complete='completeTask'}}
 {{/each}}
 {{yield}}
-
-{{!-- <div class="input-group">
-  {{ember-datepicker
-    id="example-2"
-    class="form-control"
-    inline=false
-    value=example2
-  }}
-  <label class="input-group-addon" for="example-2"><i class="fa fa-calendar"></i></label>
-</div> --}}
