@@ -9,11 +9,9 @@ export default Ember.Route.extend({
 
   actions:{
     createTask(task){
-      console.log('you getting this click?', task);
 
     },
     deleteTask(task){
-      console.log("DELETING task is", task);
        task.destroyRecord();
     },
     editTask(task){

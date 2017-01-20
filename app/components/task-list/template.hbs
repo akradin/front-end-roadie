@@ -1,8 +1,8 @@
-<form {{action 'createTask' on='submit'}}>
-{{input placeholder="Name (required)" value=Task.name}}
-{{input placeholder="Due Date (required, YYYY-MM-DD)" value=Task.due_date}}
-{{input placeholder="priority level (required, maximum of 9)" value=Task.priority}}
-{{input placeholder="details" value=Task.details}}
+<form class="create-task" {{action 'createTask' on='submit'}}>
+<div class="task-form">{{input placeholder="Name (required)" value=Task.name}}</div>
+<div class="task-form">{{input placeholder="Due Date (required, YYYY-MM-DD)" value=Task.due_date}}</div>
+<div class="task-form">{{input placeholder="priority level (required, maximum of 9)" value=Task.priority}}</div>
+<div class="task-form">{{input  placeholder="details" value=Task.details}}</div>
 <button class="add-item">Add Task</button>
 </form>
 

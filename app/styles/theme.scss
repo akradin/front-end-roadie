@@ -36,13 +36,12 @@ body {
   margin-right: 10%;
 }
 
+
 .add-item {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 40%;
+  display: inherit;
   border: none;
-  background-color: #5cb85c;
+  background-color: #44BBA4;
   color: white;
   border-radius: 5px;
   height: 35px;
@@ -50,9 +49,13 @@ body {
 }
 
 .add-item:hover {
-  background-color: #398439;
+  background-color: #44D0A4;
   opacity: .75;
   transition-duration: .3s;
+}
+
+.button-holder {
+  display: inline;
 }
 
 .edit {
@@ -84,4 +87,23 @@ body {
   background-color: #b22624;
   opacity: .75;
   transition-duration: .3s;
+}
+
+.band-links {
+  margin: 0 auto;
+}
+
+.band-link-headers {
+  display: inline-block;
+}
+
+.create-task,
+.create-contact {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.task-form,
+.contact-form {
+  margin-top: 10px;
 }
