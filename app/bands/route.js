@@ -19,13 +19,11 @@ export default Ember.Route.extend({
       let band = this.get('store').createRecord('band', newBand);
         return band.save()
         .then(() => this.get('flashMessages').success('Band created, rock on'))
-        .then(()=> band.rollbackAttributes())
         .catch(() => {
           this.get('flashMessages')
           .danger('Oh No! you need to add a name!');
-        });
-
-
+        })
+        .then(()=> band.rollbackAttributes());
 
     },
     editBand(band){
