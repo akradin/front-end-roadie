@@ -7,7 +7,10 @@ export default Ember.Component.extend({
 
   actions: {
     newBand(){
-      this.sendAction('newBand', this.get('Band'));
+      let band = this.get('Band');
+      this.set('Band', {});
+      this.sendAction('newBand', band);
+
     },
     editBand(band){
       this.sendAction('editBand', band);

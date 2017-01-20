@@ -9,6 +9,7 @@ export default Ember.Component.extend({
   actions : {
     createExpense(){
       let expense = this.get('Expense');
+      this.set('Expense', {});
       expense.band = this.get('band');
       this.sendAction('createExpense', expense);
     },

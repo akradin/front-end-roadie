@@ -6,7 +6,6 @@ export default Ember.Route.extend({
   },
   actions : {
     saveUpdate(task){
-      console.log("task is", task);
       return task.save()
       .then(() => this.get('flashMessages').success('Updated! We are still working out the kinks, so for now you have to click to get back to your band'))
       .then(() => this.transitionTo('bands'))
