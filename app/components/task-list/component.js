@@ -11,15 +11,15 @@ export default Ember.Component.extend({
   actions:{
     createTask(){
       let task = this.get('Task');
+      this.set('Task', {});
       task.band = this.get('band');
       this.sendAction('createTask', task);
     },
     toggleComplete(){
-      console.log('done', this.get('Task'));
     },
     deleteTask(task){
       this.sendAction('deleteTask', task);
-      console.log('second step of deleting', task);
+      task.rollbackAttributes();
     },
     editTask(task){
       this.sendAction('editTask', task);

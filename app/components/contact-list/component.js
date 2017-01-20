@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   actions :{
     createContact(){
       let contact = this.get('Contact');
+      this.set('Contact', {});
       contact.band = this.get('band');
       this.sendAction('createContact', contact);
     },

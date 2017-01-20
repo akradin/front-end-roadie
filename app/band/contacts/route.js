@@ -5,20 +5,21 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('band', params.band_id);
   },
   actions:{
-    createContact(newContact){
-      let contact = this.get('store').createRecord('contact', newContact);
-      return contact.save()
-      .then(() => this.get('flashMessages').success('Contac created, keep making connections!'))
-      .catch(() => {
-        this.get('flashMessages')
-        .danger('Oh No! Something is not quite right. Make sure you have filled out required fields with the right format');
-        contact.rollbackAttributes();
+    willTransition() {
+      let store = this.get('store');
+      store.peekAll('contact').forEach(function(contact) {
+        if (contact.get('isNew') && contact.get('hasDirtyAttributes')) {
+          contact.rollbackAttributes();
+        }
       });
-
-
+      return true;
     },
+
     deleteContact(contact){
+      let band = contact.get('band');
       contact.destroyRecord();
+      this.transitionTo('band', band);
+      this.transitionTo('band/contacts', band);
     },
     editContact(contact){
       this.transitionTo('contacts/edit', contact);
