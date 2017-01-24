@@ -1,17 +1,19 @@
 <form class="create-task" {{action 'createTask' on='submit'}}>
-<div class="task-form">{{input placeholder="Name (required)" value=Task.name}}</div>
-<div class="task-form">{{input placeholder="Due Date (required, YYYY-MM-DD)" value=Task.due_date}}</div>
-<div class="task-form">{{input placeholder="priority level (required, maximum of 9)" value=Task.priority}}</div>
-<div class="task-form">{{input  placeholder="details" value=Task.details}}</div>
-<button class="add-item">Add Task</button>
+  <div class="task-form">{{input placeholder="Name (required)" value=task.name}}</div>
+  <div class="task-form">{{input placeholder="Due Date (required, YYYY-MM-DD)" value=task.due_date}}</div>
+  <div class="task-form">{{input placeholder="priority level (required, maximum of 9)" value=task.priority}}</div>
+  <div class="task-form">{{input  placeholder="details" value=task.details}}</div>
+  <div class="button-holder">
+    <button class="add-item">Add Task</button>
+  </div>
 </form>
 
 
-{{#each task as |task|}}
-  <div class="task-item" {{action 'toggleComplete' on='click'}}>{{task.name}}</div>
+{{#each band.tasks as |task|}}
+  <div class="task-item">{{task.name}}</div>
   {{task-list/edit task=task
-                    delete='deleteTask'
-                    edit='editTask'
-                  complete='completeTask'}}
+                   delete='deleteTask'
+                   edit='editTask'
+                   complete='completeTask'}}
 {{/each}}
 {{yield}}

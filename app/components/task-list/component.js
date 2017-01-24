@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  Task: {
+  task: {
     name: null,
     due_date: null,
     priority: null,
@@ -10,10 +10,13 @@ export default Ember.Component.extend({
   },
   actions:{
     createTask(){
-      let task = this.get('Task');
-      this.set('Task', {});
+      let task = this.get('task');
       task.band = this.get('band');
       this.sendAction('createTask', task);
+      this.set('task.name', '');
+      this.set('task.due_date', '');
+      this.set('task.priority', '');
+      this.set('task.details', '');
     },
     toggleComplete(){
     },

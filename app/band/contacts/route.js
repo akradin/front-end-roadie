@@ -14,12 +14,21 @@ export default Ember.Route.extend({
       });
       return true;
     },
+    createContact(newContact){
+
+      let contact = this.get('store').createRecord('contact', newContact);
+      return contact.save()
+      .then(() => this.get('flashMessages').success('Contact created, keep making connections!'))
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('Oh No! Something is not quite right. Make sure you have filled out required fields with the right format');
+        contact.rollbackAttributes();
+      });
+    },
 
     deleteContact(contact){
-      let band = contact.get('band');
       contact.destroyRecord();
-      this.transitionTo('band', band);
-      this.transitionTo('band/contacts', band);
+      // contact.rollbackAttributes();
     },
     editContact(contact){
       this.transitionTo('contacts/edit', contact);

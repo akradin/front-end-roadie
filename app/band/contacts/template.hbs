@@ -1,16 +1,18 @@
-{{!-- {{contact-list band=model
-              createContact='createContact'}} --}}
+{{contact-list band=model
+              createContact='createContact'
+              deleteContact='deleteContact'
+              editContact='editContact'}}
 
-{{#link-to 'band/contacts/new' model }}Add Contact {{/link-to}}
+{{!-- {{#link-to 'band/contacts/new' model }}Add Contact {{/link-to}} --}}
 
-{{#each model.contacts as |contact|}}
+{{!-- {{#each model.contacts as |contact|}}
 <div class="contact-info">{{contact.name}}</div>
 <div class="contact-info">{{contact.phone_number}}</div>
 <div class="contact-info">{{contact.email}}</div>
 <div class="contact-info">{{contact.company}}</div>
-<div class="contact-info">{{contact.details}}</div>
-{{contact-list/edit contact=contact
+<div class="contact-info">{{contact.details}}</div> --}}
+{{!-- {{contact-list/edit contact=contact
                     delete='deleteContact'
-                    edit='editContact'}}
+                    edit='editContact'}} --}}
 
-{{/each}}
+{{!-- {{/each}} --}}

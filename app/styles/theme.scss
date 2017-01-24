@@ -2,44 +2,83 @@ body {
   background-color: #3d5a6c;
 }
 
-.contact-header {
-  display: inline-block;
-  margin-right: 10%;
-}
-
-.contact-info {
-  display: inline-block;
-  margin-right: 10%;
-}
-
 .contact-input {
   width: 30px;
 }
 
-.task-header {
-  display: inline-block;
-  margin-right: 10%;
+.band-name {
+  text-align: center;
+  color: white;
+  font-size: 30px
 }
 
-.task-info {
-  display: inline-block;
-  margin-right: 10%;
+.band-buttons {
+  text-align: center;
+  margin-top: 15px;
 }
 
-.expense-header {
-  display: inline-block;
-  margin-right: 10%;
+.go-to-band {
+  color: white;
+  background-color: #419D78;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
+  width: 100px;
 }
 
-.expense-info {
-  display: inline-block;
-  margin-right: 10%;
+.go-to-band:hover {
+  background-color: #44BBA4;
+  opacity: .75;
+  transition-duration: .3s;
 }
 
+.edit-band {
+  color: white;
+  background-color: #fa9f42;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
+  width: 70px;
+}
+
+.edit-band:hover {
+  background-color: #fac542;
+  opacity: .75;
+  transition-duration: .3s;
+}
+
+.delete-band {
+  color: white;
+  background-color: #721817;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
+  width: 70px;
+}
+
+.delete-band:hover {
+  background-color: #b22624;
+  opacity: .75;
+  transition-duration: .3s;
+}
+
+.band-links {
+  text-align: center;
+}
+
+.band-link-headers {
+  color: #44BBA4;
+  display: inline-block;
+  margin: auto 70px;
+}
+
+.band-link-headers:hover{
+  color: #44D0A4;
+  transition-duration: .3s;
+}
 
 .add-item {
   text-align: center;
-  display: inherit;
   border: none;
   background-color: #44BBA4;
   color: white;
@@ -55,7 +94,8 @@ body {
 }
 
 .button-holder {
-  display: inline;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .edit {
@@ -64,7 +104,6 @@ body {
   border: none;
   border-radius: 4px;
   height: 25px;
-  margin-right: 50%;
   width: 70px;
 }
 
@@ -89,21 +128,79 @@ body {
   transition-duration: .3s;
 }
 
-.band-links {
-  margin: 0 auto;
-}
-
-.band-link-headers {
-  display: inline-block;
-}
-
 .create-task,
-.create-contact {
+.create-contact,
+.create-band {
   width: 50%;
   margin: 10px auto;
+  text-align: center;
 }
 
 .task-form,
 .contact-form {
   margin-top: 10px;
+}
+
+.show-contacts {
+  margin-left: 30px;
+}
+
+.contact-headers {
+  margin-bottom: 15px;
+}
+
+.contact-info-name {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  width: 10%;
+  border: 1px solid white;
+  margin-right: 40px;
+}
+
+.contact-info-number {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  width: 10%;
+  border: 1px solid white;
+  margin-right: 40px;
+}
+.contact-info-email {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  width: 20%;
+  border: 1px solid white;
+  margin-right: 40px;
+}
+.contact-info-company {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  width: 15%;
+  border: 1px solid white;
+  margin-right: 40px;
+}
+.contact-info-details {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  width: 20%;
+  border: 1px solid white;
+  margin-right: 40px;
+}
+
+.contact-buttons {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.contact-edit-buttons {
+  margin: 0 70px;
 }

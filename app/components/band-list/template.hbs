@@ -1,10 +1,12 @@
-<form {{action 'newBand' on='submit'}}>
+<form class="create-band"{{action 'newBand' on='submit'}}>
 {{input placeholder="New band" value=Band.name}}
 
-<button>new band</button>
+<div class="band-buttons">
+<button class="add-item">Add Band</button>
+</div>
 </form>
 {{#each bands as |band|}}
-  <div {{action 'transition' on='click'}}>{{band.name}}</div>
+  <div class="band-name" {{action 'transition' on='click'}}>{{band.name}}</div>
 {{band-list/card band=band
                     edit='editBand'
                   delete='deleteBand'

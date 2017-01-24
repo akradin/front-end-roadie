@@ -1,8 +1,9 @@
-{{!-- <button{{action 'goToBand'}}>Go To Band</button> --}}
-<button{{action 'edit'}}>Update</button>
-
+<div class="band-buttons">
+  <button class="edit-band"{{action 'edit'}}>Update</button>
+  <button class="go-to-band"{{action 'goToBand'}}>Go To Band</button>
+  <button class="delete-band"{{action 'delete'}}>Delete</button>
+</div>
 {{!-- will need an if empty here once i get relational shit figured out --}}
-<button{{action 'delete'}}>Delete</button>
 
 
 {{yield}}

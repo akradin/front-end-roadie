@@ -1,13 +1,36 @@
 <form class="create-contact" {{action 'createContact' on='submit'}}>
-<div class="contact-form">{{input placeholder="Name (required)" value=Contact.name}}</div>
-<div class="contact-form">{{input placeholder="Phone Number - 1234567890" value=Contact.phone_number}}</div>
-<div class="contact-form">{{input placeholder="email" value=Contact.email}}</div>
-<div class="contact-form">{{input placeholder="company" value=Contact.company}}</div>
-<div class="contact-form">{{input placeholder="details" value=Contact.details}}</div>
+<div class="contact-form">{{input placeholder="Name (required)" value=newContact.name}}</div>
+<div class="contact-form">{{input placeholder="Phone Number - 1234567890" value=newContact.phone_number}}</div>
+<div class="contact-form">{{input placeholder="email" value=newContact.email}}</div>
+<div class="contact-form">{{input placeholder="company" value=newContact.company}}</div>
+<div class="contact-form">{{input placeholder="details" value=newContact.details}}</div>
   <div class="button-holder">
     <button class="add-item">Add Contact</button>
   </div>
 </form>
+
+<div class="show-contacts">
+  <div class="contact-headers">
+    <div class="contact-info-name">Name</div>
+    <div class="contact-info-number">Phone Number</div>
+    <div class="contact-info-email">Email</div>
+    <div class="contact-info-company">Company</div>
+    <div class="contact-info-details">Details</div>
+  </div>
+
+  {{#each band.contacts as |contact|}}
+    <div class="contact-info-name">{{contact.name}}</div>
+    <div class="contact-info-number">{{contact.phone_number}}</div>
+    <div class="contact-info-email">{{contact.email}}</div>
+    <div class="contact-info-company">{{contact.company}}</div>
+    <div class="contact-info-details">{{contact.details}}</div>
+    <div class="contact-buttons">
+      {{contact-list/edit contact=contact
+                          delete='deleteContact'
+                          edit='editContact'}}
+    </div>
+  {{/each}}
+</div>
 
 
 {{!--

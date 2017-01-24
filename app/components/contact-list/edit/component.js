@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  actions:{
+  actions: {
     delete(){
       this.sendAction('delete',this.get('contact'));
     },
