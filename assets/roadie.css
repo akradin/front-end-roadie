@@ -6191,7 +6191,10 @@ body {
   color: white;
   font-size: 30px; }
 
-.band-buttons {
+.band-buttons,
+.update-expense-button,
+.update-contact-button,
+.update-task-button {
   text-align: center;
   margin-top: 15px; }
 
@@ -6299,7 +6302,8 @@ body {
 
 .create-task,
 .create-contact,
-.create-band {
+.create-band,
+.create-expense {
   width: 50%;
   margin: 10px auto;
   text-align: center; }
@@ -6365,3 +6369,82 @@ body {
 
 .contact-edit-buttons {
   margin: 0 70px; }
+
+.task-name {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid white;
+  font-size: 15px;
+  width: 20%;
+  margin-right: 40px; }
+
+.task-due {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid white;
+  font-size: 15px;
+  width: 15%;
+  margin-right: 40px; }
+
+.task-priority {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid white;
+  font-size: 15px;
+  width: 10%;
+  margin-right: 40px; }
+
+.task-details {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid white;
+  font-size: 15px;
+  width: 30%;
+  margin-right: 40px; }
+
+.task-headers {
+  margin-bottom: 15px; }
+
+.show-tasks {
+  margin-left: 40px; }
+
+.task-buttons {
+  text-align: center;
+  margin-top: 15px; }
+
+.task-edit-buttons {
+  margin: auto 70px; }
+
+.expense-name {
+  border: 1px solid white;
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  width: 15%;
+  margin-right: 40px; }
+
+.expense-price {
+  border: 1px solid white;
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  width: 15%;
+  margin-right: 40px; }
+
+.expense-details {
+  border: 1px solid white;
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  width: 30%;
+  overflow: auto;
+  margin-right: 40px; }
+
+.expense-headers {
+  margin-bottom: 15px; }
+
+.show-expenses {
+  text-align: center; }
+
+.expense-edit-buttons {
+  margin: auto 70px; }
