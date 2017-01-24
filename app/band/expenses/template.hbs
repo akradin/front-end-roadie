@@ -1,17 +1,7 @@
 {{expense-list band=model
-  createExpense='createExpense'}}
-
-<div class="expense-header">Name</div>
-<div class="expense-header">Cost</div>
-<div class="expense-header">Description</div>
-<br>
-{{#each model.expenses as |expense|}}
-<div class="expense-info">{{expense.name}}</div>
-<div class="expense-info">{{expense.cost}}</div>
-<div class="expense-info">{{expense.description}}</div>
-{{expense-list/edit expense=expense
-                    delete='deleteExpense'
-                    edit='editExpense'}}
-{{/each}}
+              createExpense='createExpense'
+              editExpense='editExpense'
+              deleteExpense='deleteExpense'
+            }}
 
 {{outlet}}

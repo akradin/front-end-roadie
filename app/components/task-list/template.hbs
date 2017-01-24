@@ -8,12 +8,24 @@
   </div>
 </form>
 
+<div class="show-tasks">
+  <div class="task-headers">
+    <div class="task-name"> Name </div>
+    <div class="task-due"> Due Date </div>
+    <div class="task-priority"> Priority </div>
+    <div class="task-details"> Details </div>
+</div>
 
-{{#each band.tasks as |task|}}
-  <div class="task-item">{{task.name}}</div>
-  {{task-list/edit task=task
-                   delete='deleteTask'
-                   edit='editTask'
-                   complete='completeTask'}}
-{{/each}}
+
+  {{#each band.tasks as |task|}}
+    <div class="task-name">{{task.name}}</div>
+    <div class="task-due">{{task.due_date}}</div>
+    <div class="task-priority">{{task.priority}}</div>
+    <div class="task-details">{{task.details}}</div>
+    {{task-list/edit task=task
+                     delete='deleteTask'
+                     edit='editTask'
+                     complete='completeTask'}}
+  {{/each}}
+</div>
 {{yield}}

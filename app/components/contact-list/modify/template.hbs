@@ -1,10 +1,12 @@
 <form {{action 'update' on='submit'}}>
-{{input placeholder="Name (required)" value=contact.name}}
-{{input placeholder="Phone Number  - 1234567890" value=contact.phone_number}}
-{{input placeholder="email" value=contact.email}}
-{{input placeholder="company" value=contact.company}}
-{{input placeholder="details" value=contact.details}}
-<button>Update Contact</button>
+  <div class="create-contact">{{input placeholder="Name (required)" value=contact.name}}</div>
+  <div class="create-contact">{{input placeholder="Phone Number  - 1234567890" value=contact.phone_number}}</div>
+  <div class="create-contact">{{input placeholder="email" value=contact.email}}</div>
+  <div class="create-contact">{{input placeholder="company" value=contact.company}}</div>
+  <div class="create-contact">{{input placeholder="details" value=contact.details}}</div>
+  <div class="update-contact-button">
+    <button class="add-item">Update Contact</button>
+  </div>
 </form>
 
 {{yield}}

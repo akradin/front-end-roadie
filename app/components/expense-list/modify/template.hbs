@@ -1,6 +1,8 @@
 <form {{action 'update' on='submit'}}>
-{{input placeholder="Name" value=expense.name}}
-{{input placeholder="Description" value=expense.description}}
-{{input placeholder="Price" value=expense.cost}}
-<button>Edit Expense</button>
+<div class="create-contact">{{input placeholder="Name" value=expense.name}}</div>
+<div class="create-contact">{{input placeholder="Price" value=expense.cost}}</div>
+<div class="create-contact">{{input placeholder="Description" value=expense.details}}</div>
+<div class="update-expense-button">
+  <button class="add-item">Edit Expense</button>
+</div>
 </form>

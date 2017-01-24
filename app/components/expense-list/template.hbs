@@ -1,14 +1,25 @@
-<form {{action 'createExpense' on='submit'}}>
-{{input placeholder="Name (Required)" value=Expense.name}}
-{{input placeholder="Price (xx.xx)" value=Expense.cost}}
-{{input placeholder="Description" value=Expense.description}}
-<button class="add-item">Add Expense</button>
+<form class="create-expense" {{action 'createExpense' on='submit'}}>
+  <div class="contact-form">{{input placeholder="Name (Required)" value=expense.name}}</div>
+  <div class="contact-form">{{input placeholder="Price (xx.xx)" value=expense.cost}}</div>
+  <div class="contact-form">{{input placeholder="Description" value=expense.details}}</div>
+    <button class="add-item">Add Expense</button>
 </form>
 
 
-{{#each expense as |expense|}}
-<div>{{expense.name}}</div>
-{{expense-list/edit expense=expense
-                    edit='editExpense'
-                    delete='deleteExpense'}}
-{{/each}}
+<div class="show-expenses">
+  <div class="expense-headers">
+    <div class="expense-name">Name</div>
+    <div class="expense-price">Price</div>
+    <div class="expense-details">Details</div>
+  </div>
+
+    {{#each band.expenses as |expense|}}
+    <div class="expense-name">{{expense.name}}</div>
+    <div class="expense-price">{{expense.cost}}</div>
+    <div class="expense-details">{{expense.details}}</div>
+    {{expense-list/edit expense=expense
+                        edit='editExpense'
+                        delete='deleteExpense'}}
+    {{/each}}
+
+</div>

@@ -1,9 +1,11 @@
 <form {{action 'update' on='submit'}}>
-{{input  value=task.name}}
-{{input placeholder="due date" value=task.due_date}}
-{{input placeholder="priority level" value=task.priority}}
-{{input placeholder="details" value=task.details}}
-<button>update</button>
+  <div class="create-task">{{input  value=task.name}}</div>
+  <div class="create-task">{{input placeholder="due date" value=task.due_date}}</div>
+  <div class="create-task">{{input placeholder="priority level" value=task.priority}}</div>
+  <div class="create-task">{{input placeholder="details" value=task.details}}</div>
+  <div class="update-task-button">
+    <button class="add-item">Update</button>
+  </div>
 </form>
 
 
