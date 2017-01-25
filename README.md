@@ -9,6 +9,9 @@ making the tumultous life of the Music Industry that much easier.
 Roadie's front end was built using the front-end framework, Ember. The
 back-end was written in Rails.
 
+## Download Dependencies
+Install dependenceis with `npm insall` and `bower install`. Run a local server by running `ember server`
+
 ## Approach
 
 Roadie was built starting with the back-end. The app is built to be ever-changing

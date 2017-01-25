@@ -16,12 +16,14 @@
   </div>
 
     {{#each band.expenses as |expense|}}
+    {{#unless expense.isDeleted}}
     <div class="expense-name">{{expense.name}}</div>
     <div class="expense-price">{{expense.cost}}</div>
     <div class="expense-details">{{expense.details}}</div>
     {{expense-list/edit expense=expense
                         edit='editExpense'
                         delete='deleteExpense'}}
+    {{/unless}}
     {{/each}}
 
 </div>

@@ -19,6 +19,7 @@
   </div>
 
   {{#each band.contacts as |contact|}}
+  {{#unless contact.isDeleted}}
     <div class="contact-name">{{contact.name}}</div>
     <div class="contact-number">{{contact.phone_number}}</div>
     <div class="contact-email">{{contact.email}}</div>
@@ -29,6 +30,7 @@
                           delete='deleteContact'
                           edit='editContact'}}
     </div>
+  {{/unless}}
   {{/each}}
 </div>
 

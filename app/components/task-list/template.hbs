@@ -18,6 +18,7 @@
 
 
   {{#each band.tasks as |task|}}
+  {{#unless task.isDeleted}}
     <div class="task-name">{{task.name}}</div>
     <div class="task-due">{{task.due_date}}</div>
     <div class="task-priority">{{task.priority}}</div>
@@ -26,6 +27,7 @@
                      delete='deleteTask'
                      edit='editTask'
                      complete='completeTask'}}
+  {{/unless}}
   {{/each}}
 </div>
 {{yield}}

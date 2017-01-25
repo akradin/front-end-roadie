@@ -8,9 +8,6 @@ export default Ember.Route.extend({
   },
 
   actions:{
-    createTask(task){
-
-    },
     deleteTask(task){
        task.destroyRecord();
     },

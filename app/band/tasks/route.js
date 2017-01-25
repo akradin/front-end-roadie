@@ -20,9 +20,7 @@ export default Ember.Route.extend({
       this.transitionTo('tasks/edit', task);
     },
     deleteTask(task){
-      let band = task.get('band');
       task.destroyRecord();
-      // this.transitionTo('band/tasks', band);
 
 
     }
