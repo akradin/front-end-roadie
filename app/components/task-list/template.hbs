@@ -1,7 +1,7 @@
 <form class="create-task" {{action 'createTask' on='submit'}}>
   <div class="task-form">{{input placeholder="Name (required)" value=task.name}}</div>
-  <div class="task-form">{{input placeholder="Due Date (required, YYYY-MM-DD)" value=task.due_date}}</div>
-  <div class="task-form">{{input placeholder="priority level (required, maximum of 9)" value=task.priority}}</div>
+  <div class="task-form">{{input type="date" placeholder="Due Date (required, YYYY-MM-DD)" value=task.due_date}}</div>
+  <div class="task-form">{{input type="number" max="5" min="1" placeholder="priority level (required, maximum of 5)" value=task.priority}}</div>
   <div class="task-form">{{input  placeholder="details" value=task.details}}</div>
   <div class="button-holder">
     <button class="add-item">Add Task</button>
@@ -10,10 +10,10 @@
 
 <div class="show-tasks">
   <div class="task-headers">
-    <div class="task-name"> Name </div>
-    <div class="task-due"> Due Date </div>
-    <div class="task-priority"> Priority </div>
-    <div class="task-details"> Details </div>
+    <div class="task-name-header"> Name </div>
+    <div class="task-due-header"> Due Date </div>
+    <div class="task-priority-header"> Priority </div>
+    <div class="task-details-header"> Details </div>
 </div>
 
 

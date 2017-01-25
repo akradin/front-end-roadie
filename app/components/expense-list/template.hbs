@@ -2,15 +2,17 @@
   <div class="contact-form">{{input placeholder="Name (Required)" value=expense.name}}</div>
   <div class="contact-form">{{input placeholder="Price (xx.xx)" value=expense.cost}}</div>
   <div class="contact-form">{{input placeholder="Description" value=expense.details}}</div>
+  <div class="button-holder">
     <button class="add-item">Add Expense</button>
+  </div>
 </form>
 
 
 <div class="show-expenses">
   <div class="expense-headers">
-    <div class="expense-name">Name</div>
-    <div class="expense-price">Price</div>
-    <div class="expense-details">Details</div>
+    <div class="expense-name-header">Name</div>
+    <div class="expense-price-header">Price</div>
+    <div class="expense-details-header">Details</div>
   </div>
 
     {{#each band.expenses as |expense|}}

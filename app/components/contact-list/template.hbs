@@ -10,20 +10,20 @@
 </form>
 
 <div class="show-contacts">
-  <div class="contact-headers">
-    <div class="contact-info-name">Name</div>
-    <div class="contact-info-number">Phone Number</div>
-    <div class="contact-info-email">Email</div>
-    <div class="contact-info-company">Company</div>
-    <div class="contact-info-details">Details</div>
+  <div class="contact-headers-header">
+    <div class="contact-name-header">Name</div>
+    <div class="contact-number-header">Phone Number</div>
+    <div class="contact-email-header">Email</div>
+    <div class="contact-company-header">Company</div>
+    <div class="contact-details-header">Details</div>
   </div>
 
   {{#each band.contacts as |contact|}}
-    <div class="contact-info-name">{{contact.name}}</div>
-    <div class="contact-info-number">{{contact.phone_number}}</div>
-    <div class="contact-info-email">{{contact.email}}</div>
-    <div class="contact-info-company">{{contact.company}}</div>
-    <div class="contact-info-details">{{contact.details}}</div>
+    <div class="contact-name">{{contact.name}}</div>
+    <div class="contact-number">{{contact.phone_number}}</div>
+    <div class="contact-email">{{contact.email}}</div>
+    <div class="contact-company">{{contact.company}}</div>
+    <div class="contact-details">{{contact.details}}</div>
     <div class="contact-buttons">
       {{contact-list/edit contact=contact
                           delete='deleteContact'
