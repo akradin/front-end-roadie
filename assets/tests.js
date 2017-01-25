@@ -114,7 +114,7 @@ define('roadie/tests/band/tasks/route.jshint.lint-test', ['exports'], function (
   QUnit.module('JSHint | band/tasks/route.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'band/tasks/route.js should pass jshint.\nband/tasks/route.js: line 23, col 11, \'band\' is defined but never used.\n\n1 error');
+    assert.ok(true, 'band/tasks/route.js should pass jshint.');
   });
 });
 define('roadie/tests/bands/edit/route.jshint.lint-test', ['exports'], function (exports) {
@@ -1419,7 +1419,7 @@ define('roadie/tests/tasks/route.jshint.lint-test', ['exports'], function (expor
   QUnit.module('JSHint | tasks/route.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'tasks/route.js should pass jshint.\ntasks/route.js: line 11, col 16, \'task\' is defined but never used.\n\n1 error');
+    assert.ok(true, 'tasks/route.js should pass jshint.');
   });
 });
 define('roadie/tests/test-helper', ['exports', 'roadie/tests/helpers/resolver', 'roadie/tests/helpers/flash-message', 'ember-qunit'], function (exports, _roadieTestsHelpersResolver, _roadieTestsHelpersFlashMessage, _emberQunit) {
